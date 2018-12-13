@@ -13,7 +13,6 @@ import Halogen.HTML.Properties as HP
 import Halogen.HTML.Core (ElemName(..), PropName(..), AttrName(..), HTML(..), Namespace, Prop)
 
 import OnsPage as OP
-import OnsPage2 as OP2
 
 import Data.Either (Either)
 import Data.Functor.Coproduct (Coproduct)
