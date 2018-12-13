@@ -23,7 +23,7 @@ onsReady = fromEffectFnAff onsReadyImpl
 main :: Effect Unit
 main = do
   launchAff_ do
-    _<- onsReady
+    onsReady
     liftEffect do
       HA.runHalogenAff do
         body <- HA.awaitBody
