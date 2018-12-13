@@ -14,9 +14,9 @@ import Halogen.VDom.Driver (runUI)
 
 import MainPage as MP
 
-foreign import onsReadyImpl :: EffectFnAff Void
+foreign import onsReadyImpl :: EffectFnAff Unit
 
-onsReady :: Aff Void
+onsReady :: Aff Unit
 onsReady = fromEffectFnAff onsReadyImpl
 
 

@@ -45,14 +45,14 @@ type State =
     pageStack :: Q.PageStack -- Array(HTML (ComponentSlot HTML Q.PageQuery Aff Q.Slot (Q.Query Unit)) (Q.Query Unit))
   }
 
-foreign import pushPageImpl :: String -> String -> EffectFnAff Void
+foreign import pushPageImpl :: String -> String -> EffectFnAff Unit
 
-pushPage :: String -> String -> Aff Void
+pushPage :: String -> String -> Aff Unit
 pushPage navId pageId = fromEffectFnAff $ pushPageImpl navId pageId
 
-foreign import popPageImpl :: String -> EffectFnAff Void
+foreign import popPageImpl :: String -> EffectFnAff Unit
 
-popPage :: String -> Aff Void
+popPage :: String -> Aff Unit
 popPage navId = fromEffectFnAff $ popPageImpl navId
 
 
